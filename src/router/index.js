@@ -16,15 +16,40 @@ const routes = [
     component: Index,
     children: [
       {
-        path: '/home',
-        name: 'Home',
-        component: () => import('../views/Home.vue')
+        path: '/dashboard',
+        name: 'Dashboard',
+        component: () => import('../views/Dashboard.vue')
       },
       {
-        path: '/about',
-        name: 'About',
-        component: () => import('../views/About.vue')
-      }
+        path: '/administrations/user',
+        name: 'UserManagement',
+        component: () => import('../views/administrations/UserManagement.vue')
+      },
+      {
+        path: '/administrations/role',
+        name: 'RoleManagement',
+        component: () => import('../views/administrations/RoleManagement.vue')
+      },
+      {
+        path: '/administrations/menu',
+        name: 'MenuManagement',
+        component: () => import('../views/administrations/MenuManagement.vue')
+      },
+      {
+        path: '/administrations/session',
+        name: 'SessionManagement',
+        component: () => import('../views/administrations/SessionManagement.vue')
+      },
+      {
+        path: '/administrations/variable',
+        name: 'VariableParameters',
+        component: () => import('../views/administrations/VariableParameters.vue')
+      },
+      {
+        path: '/administrations/activity',
+        name: 'LogActivity',
+        component: () => import('../views/administrations/LogActivity.vue')
+      },
     ]
   },
 ]
