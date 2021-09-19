@@ -57,7 +57,7 @@
           </v-list-item>
         </v-list-group>
 
-        <v-list-item to="/login">
+        <v-list-item @click="logout">
           <v-list-item-icon>
             <v-icon>mdi-logout-variant</v-icon>
           </v-list-item-icon>
@@ -115,5 +115,12 @@ export default {
       },
     ]
   }),
+
+  methods: {
+    logout () {
+      localStorage.clear()
+      this.$router.push({ name: 'Login' })
+    }
+  }
 };
 </script>

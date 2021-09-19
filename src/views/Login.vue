@@ -68,7 +68,10 @@ export default {
   methods: {
     submit () {
       if (this.validate()) {
-        if (this.username === this.password) this.$router.push({ name: 'Index' })
+        if (this.username === this.password) {
+          localStorage.setItem('is-auth', true)
+          this.$router.push({ name: 'Index' })
+        }
       }
     },
     validate () {
